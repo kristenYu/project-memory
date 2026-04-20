@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1674331452055466442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8300513733472115310}
+  - component: {fileID: 5498893097885994881}
+  m_Layer: 0
+  m_Name: FrameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8300513733472115310
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674331452055466442}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.36171, y: 0.43888, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5498893097885994881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674331452055466442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0af63463b56e7e145bed05d806710549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FrameManager
+  frameText: {fileID: 0}
+  playerText:
+  - "I\u2026 don\u2019t want to forget\\nI don\u2019t want to forget about her. She
+    is important. So important. Why can\u2019t I remember her name?   What were we
+    doing? \\nWhy is this important again?  I remember\u2026. "
+  avoidantText:
+  - Her favorite restaurant. Spanish tapas. She likes it because of the time she
+    spent studying abroad in Spain. You always resented her for leaving. She probably
+    cheated on you. But it was worth it to be with her. She glowed when she was happy.
+  joyfulText:
+  - "Your favorite restaurant! Of course. You were on a date with her. She loves
+    this restaurant too, that\u2019s why you picked it. Italian. Italian is classic.
+    That\u2019s why you went with it. You love italian too. And you wanted to split
+    a bottle of wine. "
+  insecureText:
+  - 'The sushi place. A common place for you two to be at. She liked it, you liked
+    it well enough. A good enough place as any for a conversation. '
+  currentTalkingState: 0
+  index: 0
