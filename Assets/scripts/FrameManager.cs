@@ -21,11 +21,11 @@ public class FrameManager : MonoBehaviour
     public string[] insecureText;
 
     public TalkingState currentTalkingState;
-    public int index;
+
+    public StoryManager storyManager;
 
     void Start()
     {
-        index = 0;
         currentTalkingState = TalkingState.player;
     }
 
@@ -34,21 +34,19 @@ public class FrameManager : MonoBehaviour
         switch(currentTalkingState)
         {
             case TalkingState.avoidant:
-                frameText.text = avoidantText[index];
+                frameText.text = avoidantText[storyManager.currentDecision];
                 break;
             case TalkingState.joyful:
-                frameText.text = joyfulText[index];
+                frameText.text = joyfulText[storyManager.currentDecision];
                 break;
             case TalkingState.insecure:
-                frameText.text = insecureText[index];
+                frameText.text = insecureText[storyManager.currentDecision];
                 break;
             case TalkingState.player:
-                frameText.text = playerText[index];
+                frameText.text = playerText[storyManager.currentDecision];
                 break;
         }
     }
-
-
 
 
 
