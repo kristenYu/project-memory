@@ -12,13 +12,12 @@ public class ButtonManager : MonoBehaviour
     public AudioClip avoidantSoundClip;
     public AudioClip joyfulSoundClip; 
     public AudioClip insecureSoundClip;
+    public AudioClip buttonClip;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        avoidantSelectButton.SetActive(false);
-        joyfulSelectButton.SetActive(false);
-        insecureSelectButton.SetActive(false);
+        hideAllSelectButtons();
     }
 
     void Update()
@@ -62,16 +61,29 @@ public class ButtonManager : MonoBehaviour
     public void SelectAvoidantButton()
     {
         storyManager.SetDecision(TalkingState.avoidant);
+        audioSource.PlayOneShot(buttonClip);
+        hideAllSelectButtons();
     }
 
     public void SelectJoyfulButton()
     {
         storyManager.SetDecision(TalkingState.joyful);
+        audioSource.PlayOneShot(buttonClip);
+        hideAllSelectButtons();
     }
 
     public void SelectInsecureButton()
     {
         storyManager.SetDecision(TalkingState.insecure);
+        audioSource.PlayOneShot(buttonClip);
+        hideAllSelectButtons();
+    }
+
+    public void hideAllSelectButtons()
+    {
+        avoidantSelectButton.SetActive(false);
+        joyfulSelectButton.SetActive(false);
+        insecureSelectButton.SetActive(false);
     }
 
 }

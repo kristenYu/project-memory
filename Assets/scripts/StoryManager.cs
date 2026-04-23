@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class StoryManager : MonoBehaviour
 {
+    public AudioSource audioSource;
+    public AudioClip buttonClip;
     public FrameManager frameManager;
     public TalkingState[] decisionArray; 
     public TalkingState currentTalkingState;
@@ -99,6 +101,7 @@ public class StoryManager : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.Space))
             {
+                audioSource.PlayOneShot(buttonClip);
                 theAvoidant.SetActive(true);
                 theJoyful.SetActive(true);
                 theInsecure.SetActive(true);

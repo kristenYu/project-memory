@@ -2591,6 +2591,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4649228357953425432, guid: c39bb06d6848e2441b3904b189ba9a8f, type: 3}
+      propertyPath: buttonClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ca348786a3d07dc4599d7751fe9b74b1, type: 3}
+    - target: {fileID: 4649228357953425432, guid: c39bb06d6848e2441b3904b189ba9a8f, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 147372937}
+    - target: {fileID: 4649228357953425432, guid: c39bb06d6848e2441b3904b189ba9a8f, type: 3}
       propertyPath: frameManager
       value: 
       objectReference: {fileID: 1322958488}
@@ -2598,6 +2606,18 @@ PrefabInstance:
       propertyPath: storyManager
       value: 
       objectReference: {fileID: 8877453662797353349}
+    - target: {fileID: 4649228357953425432, guid: c39bb06d6848e2441b3904b189ba9a8f, type: 3}
+      propertyPath: joyfulSoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9bf807d6a43d0604496a66ef7d2ac580, type: 3}
+    - target: {fileID: 4649228357953425432, guid: c39bb06d6848e2441b3904b189ba9a8f, type: 3}
+      propertyPath: avoidantSoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e8ad81dee3b3a23428a7534c6b064d7e, type: 3}
+    - target: {fileID: 4649228357953425432, guid: c39bb06d6848e2441b3904b189ba9a8f, type: 3}
+      propertyPath: insecureSoundClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 03c4ce7b427c9e54b9b74b96d4cddd56, type: 3}
     - target: {fileID: 4649228357953425432, guid: c39bb06d6848e2441b3904b189ba9a8f, type: 3}
       propertyPath: joyfulSelectButton
       value: 
@@ -3272,6 +3292,14 @@ PrefabInstance:
       propertyPath: theJoyful
       value: 
       objectReference: {fileID: 1849651429}
+    - target: {fileID: 1364785838555814712, guid: 6f24cecd336814b448f209bb6e239a95, type: 3}
+      propertyPath: buttonClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ca348786a3d07dc4599d7751fe9b74b1, type: 3}
+    - target: {fileID: 1364785838555814712, guid: 6f24cecd336814b448f209bb6e239a95, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 147372937}
     - target: {fileID: 1364785838555814712, guid: 6f24cecd336814b448f209bb6e239a95, type: 3}
       propertyPath: theAvoidant
       value: 
