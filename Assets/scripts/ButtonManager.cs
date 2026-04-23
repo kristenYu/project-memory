@@ -8,6 +8,11 @@ public class ButtonManager : MonoBehaviour
     public GameObject joyfulSelectButton;
     public GameObject insecureSelectButton;
 
+    public AudioSource audioSource;
+    public AudioClip avoidantSoundClip;
+    public AudioClip joyfulSoundClip; 
+    public AudioClip insecureSoundClip;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -30,6 +35,8 @@ public class ButtonManager : MonoBehaviour
         avoidantSelectButton.SetActive(true);
         joyfulSelectButton.SetActive(false);
         insecureSelectButton.SetActive(false);
+        frameManager.changeFrame(frameManager.currentTalkingState);
+        audioSource.PlayOneShot(avoidantSoundClip);
     }
 
     public void PressJoyfulButton()
@@ -38,6 +45,8 @@ public class ButtonManager : MonoBehaviour
         avoidantSelectButton.SetActive(false);
         joyfulSelectButton.SetActive(true);
         insecureSelectButton.SetActive(false);
+        frameManager.changeFrame(frameManager.currentTalkingState);
+        audioSource.PlayOneShot(joyfulSoundClip);
     }
 
     public void PressInsecureButton()
@@ -46,6 +55,8 @@ public class ButtonManager : MonoBehaviour
         avoidantSelectButton.SetActive(false);
         joyfulSelectButton.SetActive(false);
         insecureSelectButton.SetActive(true);
+        frameManager.changeFrame(frameManager.currentTalkingState);
+        audioSource.PlayOneShot(insecureSoundClip);
     }
 
     public void SelectAvoidantButton()

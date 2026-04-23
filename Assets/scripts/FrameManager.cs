@@ -24,6 +24,8 @@ public class FrameManager : MonoBehaviour
 
     public StoryManager storyManager;
 
+    public FramePiece[] frameArray;
+
     void Start()
     {
         currentTalkingState = TalkingState.player;
@@ -31,6 +33,7 @@ public class FrameManager : MonoBehaviour
 
     void Update()
     {
+       
         switch(currentTalkingState)
         {
             case TalkingState.avoidant:
@@ -48,6 +51,15 @@ public class FrameManager : MonoBehaviour
         }
     }
 
+    public void changeFrame(TalkingState talkingState)
+    {
+         foreach(FramePiece framePiece in frameArray)
+        {
+            framePiece.updateFrame(talkingState);
+        }
+    }
+
+    
 
 
 

@@ -49,7 +49,27 @@ MonoBehaviour:
   - "I\u2026 don\u2019t want to forget\\nI don\u2019t want to forget about her. She
     is important. So important. Why can\u2019t I remember her name?   What were we
     doing? \\nWhy is this important again?  I remember\u2026. "
+  - "Oh\u2026 yes. Thats what it was. It started off fine enough. "
+  - "Ah\u2026 Yea. She wanted to talk\u2026. I.. don\u2019t want to remember anymore. "
+  - "I\u2026 don\u2019t want to forget\\nI don\u2019t want to forget about her. She
+    is important. So important. Why can\u2019t I remember her name?   What were we
+    doing? \\nWhy is this important again?  I remember\u2026. "
+  - "I\u2026 don\u2019t want to forget\\nI don\u2019t want to forget about her. She
+    is important. So important. Why can\u2019t I remember her name?   What were we
+    doing? \\nWhy is this important again?  I remember\u2026. "
   avoidantText:
+  - Her favorite restaurant. Spanish tapas. She likes it because of the time she
+    spent studying abroad in Spain. You always resented her for leaving. She probably
+    cheated on you. But it was worth it to be with her. She glowed when she was happy.
+  - 'She ordered her favorite, Gambas al ajillo. It probably reminded her of the
+    guy she cheated with. She offered some to you, but the thought turned your stomach.
+    Instead you focused on the Patatas bravas. She smiled at you, but somehow it
+    looked sad.  '
+  - "You changed the subject. Or tried to. Maybe she would forget about it or it
+    wasn\u2019t that big of a deal.  But then.."
+  - Her favorite restaurant. Spanish tapas. She likes it because of the time she
+    spent studying abroad in Spain. You always resented her for leaving. She probably
+    cheated on you. But it was worth it to be with her. She glowed when she was happy.
   - Her favorite restaurant. Spanish tapas. She likes it because of the time she
     spent studying abroad in Spain. You always resented her for leaving. She probably
     cheated on you. But it was worth it to be with her. She glowed when she was happy.
@@ -58,8 +78,31 @@ MonoBehaviour:
     this restaurant too, that\u2019s why you picked it. Italian. Italian is classic.
     That\u2019s why you went with it. You love italian too. And you wanted to split
     a bottle of wine. "
+  - 'She was so excited! And happy! She picked through her plate of pasta in front
+    of her. Not quite eating full bites. And drinking her wine rather quickly. She
+    must have really enjoyed the wine! '
+  - She was just nervous because it was such big news. You asked her what she was
+    so excited about. But then..
+  - "Your favorite restaurant! Of course. You were on a date with her. She loves
+    this restaurant too, that\u2019s why you picked it. Italian. Italian is classic.
+    That\u2019s why you went with it. You love italian too. And you wanted to split
+    a bottle of wine. "
+  - "Your favorite restaurant! Of course. You were on a date with her. She loves
+    this restaurant too, that\u2019s why you picked it. Italian. Italian is classic.
+    That\u2019s why you went with it. You love italian too. And you wanted to split
+    a bottle of wine. "
   insecureText:
   - 'The sushi place. A common place for you two to be at. She liked it, you liked
     it well enough. A good enough place as any for a conversation. '
+  - 'You knew she wanted to talk about something. You feared the worst but hoped
+    for the best. Maybe she wanted to tell you she wanted to take the next step with
+    you. That would be nice.  '
+  - "She looked at you knowingly. She knew what you were thinking. She always knew
+    that you were worried about some ex or another. She opened her mouth to speak,
+    and then closed it\u2026."
+  - 'The sushi place. A common place for you two to be at. She liked it, you liked
+    it well enough. A good enough place as any for a conversation. '
+  - 'The sushi place. A common place for you two to be at. She liked it, you liked
+    it well enough. A good enough place as any for a conversation. '
   currentTalkingState: 0
-  index: 0
+  storyManager: {fileID: 0}
