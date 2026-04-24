@@ -51,5 +51,11 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "project-memory.slnx"
+    "dotnet.defaultSolution": "project-memory.slnx",
+    "dotnet.backgroundAnalysis.analyzerDiagnosticsScope": "fullSolution",
+    "dotnet.backgroundAnalysis.compilerDiagnosticsScope": "fullSolution",
+    "python.analysis.diagnosticMode": "workspace",
+    "cSpell.words": [
+        "Digi"
+    ]
 }

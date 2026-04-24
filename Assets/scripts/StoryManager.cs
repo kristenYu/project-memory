@@ -1,18 +1,18 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class StoryManager : MonoBehaviour
 {
     public AudioSource audioSource;
     public AudioClip buttonClip;
     public FrameManager frameManager;
-    public TalkingState[] decisionArray; 
+    public GlitchManager glitchManager;
+    public TalkingState[] decisionArray;
     public TalkingState currentTalkingState;
     public int currentDecision;
 
-    public GameObject theAvoidant; 
-    public GameObject theJoyful; 
+    public GameObject theAvoidant;
+    public GameObject theJoyful;
     public GameObject theInsecure;
 
     public GameObject spaceContinue;
@@ -34,38 +34,39 @@ public class StoryManager : MonoBehaviour
     public Sprite[] coreBrSprites;
 
     //core bottom left (coreBl)
-    public float coreBlGlitchLengthTimer; 
+    public float coreBlGlitchLengthTimer;
     public float coreBlRandomGlitchLength;
     public float coreBlStartGlitchTimer;
-    public float coreBlRandomStartGlitch; 
+    public float coreBlRandomStartGlitch;
     public bool isCoreB1Glitching;
 
     //core bottom right (core Br)
-    public float coreBrGlitchLengthTimer; 
+    public float coreBrGlitchLengthTimer;
     public float coreBrRandomGlitchLength;
     public float coreBrStartGlitchTimer;
-    public float coreBrRandomStartGlitch; 
+    public float coreBrRandomStartGlitch;
     public bool isCoreBrGlitching;
 
     //core top left (core Tl)
-    public float coreTlGlitchLengthTimer; 
+    public float coreTlGlitchLengthTimer;
     public float coreTlRandomGlitchLength;
     public float coreTlStartGlitchTimer;
-    public float coreTlRandomStartGlitch; 
+    public float coreTlRandomStartGlitch;
     public bool isCoreTlGlitching;
 
     //core top right (core Tr)
-    public float coreTrGlitchLengthTimer; 
+    public float coreTrGlitchLengthTimer;
     public float coreTrRandomGlitchLength;
     public float coreTrStartGlitchTimer;
-    public float coreTrRandomStartGlitch; 
+    public float coreTrRandomStartGlitch;
     public bool isCoreTrGlitching;
 
-
     public bool isIntro;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        glitchManager.OpeningGlitch();
         decisionArray = new TalkingState[5];
         currentDecision = 0;
         isIntro = true;
@@ -92,14 +93,13 @@ public class StoryManager : MonoBehaviour
         coreTrStartGlitchTimer = 0;
         coreTrRandomStartGlitch = Random.Range(1f, 5f);
         isCoreTrGlitching = false;
-
     }
 
     void Update()
     {
-        if(isIntro)
+        if (isIntro)
         {
-            if(Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 audioSource.PlayOneShot(buttonClip);
                 theAvoidant.SetActive(true);
@@ -121,88 +121,109 @@ public class StoryManager : MonoBehaviour
         coreTrGlitchLengthTimer += Time.deltaTime;
         coreTrStartGlitchTimer += Time.deltaTime;
 
-        if(isCoreB1Glitching)
+        if (isCoreB1Glitching)
         {
-            if(coreBlGlitchLengthTimer > coreBlRandomGlitchLength)
+            if (coreBlGlitchLengthTimer > coreBlRandomGlitchLength)
             {
                 resetCore(coreBlSpriteRenderer, coreBlSprites);
                 coreBlStartGlitchTimer = 0;
                 isCoreB1Glitching = false;
             }
         }
-        if(isCoreBrGlitching)
+        if (isCoreBrGlitching)
         {
-            if(coreBrGlitchLengthTimer > coreBrRandomGlitchLength)
+            if (coreBrGlitchLengthTimer > coreBrRandomGlitchLength)
             {
                 resetCore(coreBrSpriteRenderer, coreBrSprites);
                 coreBrStartGlitchTimer = 0;
                 isCoreBrGlitching = false;
             }
         }
-        if(isCoreTlGlitching)
+        if (isCoreTlGlitching)
         {
-            if(coreTlGlitchLengthTimer > coreTlRandomGlitchLength)
+            if (coreTlGlitchLengthTimer > coreTlRandomGlitchLength)
             {
                 resetCore(coreTlSpriteRenderer, coreTlSprites);
                 coreTlStartGlitchTimer = 0;
                 isCoreTlGlitching = false;
             }
         }
-        if(isCoreTrGlitching)
+        if (isCoreTrGlitching)
         {
-            if(coreTrGlitchLengthTimer > coreTrRandomGlitchLength)
+            if (coreTrGlitchLengthTimer > coreTrRandomGlitchLength)
             {
                 resetCore(coreTrSpriteRenderer, coreTrSprites);
                 coreTrStartGlitchTimer = 0;
                 isCoreTrGlitching = false;
             }
         }
-        
 
-
-      
-        if(coreBl.activeSelf)
+        if (coreBl.activeSelf)
         {
-            if(!isCoreB1Glitching)
+            if (!isCoreB1Glitching)
             {
-                if(coreBlStartGlitchTimer > coreBlRandomStartGlitch)
+                if (coreBlStartGlitchTimer > coreBlRandomStartGlitch)
                 {
-                    glitchCore(coreBlGlitchLengthTimer, coreBlRandomGlitchLength, 0, coreBlSpriteRenderer, coreBlSprites);
+                    glitchCore(
+                        coreBlGlitchLengthTimer,
+                        coreBlRandomGlitchLength,
+                        0,
+                        coreBlSpriteRenderer,
+                        coreBlSprites
+                    );
                     isCoreB1Glitching = true;
                 }
             }
         }
 
-        if(coreBr.activeSelf)
+        if (coreBr.activeSelf)
         {
-            if(!isCoreBrGlitching)
+            if (!isCoreBrGlitching)
             {
-                if(coreBrStartGlitchTimer > coreBrRandomStartGlitch)
+                if (coreBrStartGlitchTimer > coreBrRandomStartGlitch)
                 {
-                    glitchCore(coreBrGlitchLengthTimer, coreBrRandomGlitchLength, 1, coreBrSpriteRenderer, coreBrSprites);
+                    glitchCore(
+                        coreBrGlitchLengthTimer,
+                        coreBrRandomGlitchLength,
+                        1,
+                        coreBrSpriteRenderer,
+                        coreBrSprites
+                    );
                     isCoreBrGlitching = true;
                 }
             }
-        }   
+        }
 
-        if(coreTl.activeSelf)
+        if (coreTl.activeSelf)
         {
-            if(!isCoreTlGlitching)
+            if (!isCoreTlGlitching)
             {
-                if(coreTlStartGlitchTimer > coreTlRandomStartGlitch)
+                if (coreTlStartGlitchTimer > coreTlRandomStartGlitch)
                 {
-                    glitchCore(coreTlGlitchLengthTimer, coreTlRandomGlitchLength, 2, coreTlSpriteRenderer, coreTlSprites);
+                    glitchCore(
+                        coreTlGlitchLengthTimer,
+                        coreTlRandomGlitchLength,
+                        2,
+                        coreTlSpriteRenderer,
+                        coreTlSprites
+                    );
                     isCoreTlGlitching = true;
                 }
             }
         }
-        if(coreTr.activeSelf)
+        if (coreTr.activeSelf)
         {
-            if(!isCoreTrGlitching)
+            if (!isCoreTrGlitching)
             {
-                if(coreTrStartGlitchTimer > coreTrRandomStartGlitch)
+                if (coreTrStartGlitchTimer > coreTrRandomStartGlitch)
                 {
-                    glitchCore(coreTrGlitchLengthTimer, coreTrRandomGlitchLength, 3, coreTrSpriteRenderer, coreTrSprites);
+                    glitchCore(
+                        coreTrGlitchLengthTimer,
+                        coreTrRandomGlitchLength,
+                        3,
+                        coreTrSpriteRenderer,
+                        coreTrSprites
+                    );
                     isCoreTrGlitching = true;
                 }
             }
@@ -215,10 +236,10 @@ public class StoryManager : MonoBehaviour
         frameManager.currentTalkingState = TalkingState.player;
         frameManager.changeFrame(TalkingState.player);
         coreBlStartGlitchTimer = 0;
-        if(currentDecision < decisionArray.Length)
+        if (currentDecision < decisionArray.Length)
         {
             currentDecision += 1;
-            switch(currentDecision)
+            switch (currentDecision)
             {
                 case 1:
                     coreBl.SetActive(true);
@@ -232,13 +253,18 @@ public class StoryManager : MonoBehaviour
                 case 4:
                     coreTr.SetActive(true);
                     break;
-
             }
         }
     }
 
-    public void glitchCore(float coreGlitchTimer, float coreGlitchLength, int decisionPoint, Image coreRenderer, Sprite[] spriteArray)
-    {   
+    public void glitchCore(
+        float coreGlitchTimer,
+        float coreGlitchLength,
+        int decisionPoint,
+        Image coreRenderer,
+        Sprite[] spriteArray
+    )
+    {
         coreGlitchTimer = 0;
         coreGlitchLength = Random.Range(0.5f, 2f);
         coreRenderer.sprite = spriteArray[(int)decisionArray[decisionPoint]];

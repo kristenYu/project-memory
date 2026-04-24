@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class FramePiece : MonoBehaviour
 {
-    public Sprite playerFrame; 
+    public Sprite playerFrame;
     public Sprite avoidantFrame;
     public Sprite joyfulFrame;
     public Sprite insecureFrame;
@@ -16,12 +16,12 @@ public class FramePiece : MonoBehaviour
         thisSpriteRenderer.sprite = playerFrame;
     }
 
-    public void updateFrame(TalkingState talkingState)
+    public void UpdateFrame(TalkingState talkingState)
     {
-        switch(talkingState)
+        switch (talkingState)
         {
             case TalkingState.player:
-                thisSpriteRenderer.sprite = playerFrame; 
+                thisSpriteRenderer.sprite = playerFrame;
                 break;
             case TalkingState.avoidant:
                 thisSpriteRenderer.sprite = avoidantFrame;
@@ -34,6 +34,4 @@ public class FramePiece : MonoBehaviour
                 break;
         }
     }
-
-
 }

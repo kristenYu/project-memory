@@ -4,28 +4,25 @@ public class ButtonManager : MonoBehaviour
 {
     public FrameManager frameManager;
     public StoryManager storyManager;
-    public GameObject avoidantSelectButton; 
+    public GameObject avoidantSelectButton;
     public GameObject joyfulSelectButton;
     public GameObject insecureSelectButton;
 
     public AudioSource audioSource;
     public AudioClip avoidantSoundClip;
-    public AudioClip joyfulSoundClip; 
+    public AudioClip joyfulSoundClip;
     public AudioClip insecureSoundClip;
     public AudioClip buttonClip;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        hideAllSelectButtons();
+        HideAllSelectButtons();
     }
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            
-        }
+        if (Input.GetKeyDown(KeyCode.Space)) { }
     }
 
     public void PressAvoidantButton()
@@ -62,29 +59,27 @@ public class ButtonManager : MonoBehaviour
     {
         storyManager.SetDecision(TalkingState.avoidant);
         audioSource.PlayOneShot(buttonClip);
-        hideAllSelectButtons();
+        HideAllSelectButtons();
     }
 
     public void SelectJoyfulButton()
     {
         storyManager.SetDecision(TalkingState.joyful);
         audioSource.PlayOneShot(buttonClip);
-        hideAllSelectButtons();
+        HideAllSelectButtons();
     }
 
     public void SelectInsecureButton()
     {
         storyManager.SetDecision(TalkingState.insecure);
         audioSource.PlayOneShot(buttonClip);
-        hideAllSelectButtons();
+        HideAllSelectButtons();
     }
 
-    public void hideAllSelectButtons()
+    public void HideAllSelectButtons()
     {
         avoidantSelectButton.SetActive(false);
         joyfulSelectButton.SetActive(false);
         insecureSelectButton.SetActive(false);
     }
-
 }
-

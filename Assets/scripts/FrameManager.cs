@@ -1,23 +1,22 @@
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public enum TalkingState
 {
     player,
-    avoidant, 
-    joyful, 
-    insecure
-
+    avoidant,
+    joyful,
+    insecure,
 }
 
 public class FrameManager : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    
+
     public TextMeshProUGUI frameText;
     public string[] playerText;
     public string[] avoidantText;
-    public string[] joyfulText; 
+    public string[] joyfulText;
     public string[] insecureText;
 
     public TalkingState currentTalkingState;
@@ -33,8 +32,7 @@ public class FrameManager : MonoBehaviour
 
     void Update()
     {
-       
-        switch(currentTalkingState)
+        switch (currentTalkingState)
         {
             case TalkingState.avoidant:
                 frameText.text = avoidantText[storyManager.currentDecision];
@@ -53,14 +51,9 @@ public class FrameManager : MonoBehaviour
 
     public void changeFrame(TalkingState talkingState)
     {
-         foreach(FramePiece framePiece in frameArray)
+        foreach (FramePiece framePiece in frameArray)
         {
-            framePiece.updateFrame(talkingState);
+            framePiece.UpdateFrame(talkingState);
         }
     }
-
-    
-
-
-
 }
