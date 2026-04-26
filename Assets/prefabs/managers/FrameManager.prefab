@@ -46,63 +46,127 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FrameManager
   frameText: {fileID: 0}
   playerText:
-  - "I\u2026 don\u2019t want to forget\\nI don\u2019t want to forget about her. She
-    is important. So important. Why can\u2019t I remember her name?   What were we
-    doing? \\nWhy is this important again?  I remember\u2026. "
-  - "Oh\u2026 yes. Thats what it was. It started off fine enough. "
-  - "Ah\u2026 Yea. She wanted to talk\u2026. I.. don\u2019t want to remember anymore. "
-  - "I\u2026 don\u2019t want to forget\\nI don\u2019t want to forget about her. She
-    is important. So important. Why can\u2019t I remember her name?   What were we
-    doing? \\nWhy is this important again?  I remember\u2026. "
-  - "I\u2026 don\u2019t want to forget\\nI don\u2019t want to forget about her. She
-    is important. So important. Why can\u2019t I remember her name?   What were we
-    doing? \\nWhy is this important again?  I remember\u2026. "
+  - "I\u2026 don\u2019t want to forget... "
+  - "I don\u2019t want to forget about her. She is important. So important. Why can\u2019t
+    I remember her name?"
+  - "What were we doing?\\nWhy is this important again?  I remember\u2026"
+  - "What were we doing?\\nWhy is this important again?  I remember\u2026"
+  - "Oh\u2026 yes. That's what it was. It started off fine enough. "
+  - "Ah\u2026 Yea. She wanted to talk\u2026. "
+  - "I.. don\u2019t want to remember anymore."
+  - "I.. don\u2019t want to remember anymore."
+  - "She sighed. She seemed unsurprised at my reaction. Maybe I shouldn\u2019t remember
+    how it went. "
+  - "Ah\u2026how could I have forgotten that? It was the last thing I wanted to hear."
+  - "No, no, no fuck. I don\u2019t want to lose her. I don't want to forget. I must
+    have said something. Why can\u2019t I remember properly?"
+  - "I can\u2019t. It can\u2019t go this way"
+  - "Here it comes\u2026."
+  - No. No.
+  - "That\u2019s\u2026That\u2019s not it\u2026"
+  - That's not what happened.
+  - "I\u2026 I broke up with her. She was perfect. But I\u2026"
+  - "But I\u2026I was wrong. I mean\u2026how did she react again?"
+  - "No\u2026.. No, no, no. "
+  - "She\u2019s dead. And it's my fault."
+  - "What was her name again\u2026?"
   avoidantText:
-  - Her favorite restaurant. Spanish tapas. She likes it because of the time she
-    spent studying abroad in Spain. You always resented her for leaving. She probably
-    cheated on you. But it was worth it to be with her. She glowed when she was happy.
-  - 'She ordered her favorite, Gambas al ajillo. It probably reminded her of the
-    guy she cheated with. She offered some to you, but the thought turned your stomach.
-    Instead you focused on the Patatas bravas. She smiled at you, but somehow it
-    looked sad.  '
-  - "You changed the subject. Or tried to. Maybe she would forget about it or it
-    wasn\u2019t that big of a deal.  But then.."
-  - Her favorite restaurant. Spanish tapas. She likes it because of the time she
-    spent studying abroad in Spain. You always resented her for leaving. She probably
-    cheated on you. But it was worth it to be with her. She glowed when she was happy.
-  - Her favorite restaurant. Spanish tapas. She likes it because of the time she
-    spent studying abroad in Spain. You always resented her for leaving. She probably
-    cheated on you. But it was worth it to be with her. She glowed when she was happy.
+  - The sushi place. A common place for you two to be. She liked it, you liked it
+    well enough. A good enough place as any for a conversation.
+  - She ordered her usual without even looking at the menu. You knew she wanted to
+    talk about something. You feared the worst but hoped for the best. Maybe she
+    wanted to tell you she wanted to take the next step with you. That would be nice.
+  - "You changed the subject. Or tried to. Maybe she would forget about it, or it
+    wasn\u2019t that big of a deal.  But then\u2026"
+  - I remember. You must remember.
+  - "She said, \u201CYou never want to address anything.\u201D You wished you were
+    having any conversation but this one. Isn\u2019t it easier to just move on? "
+  - " Can we not do this now? Is she really doing this now? She started to look like
+    there were tears in her eyes. You could feel the heat behind your eyes start
+    to build. You didn\u2019t want to cry. "
+  - "She said, \u201CYou never listen to me. We have so many problems. I think we
+    should break up.\u201D"
+  - "I thought it would be better to break up with her first. Then I wouldn\u2019t
+    be broken up with."
+  - "She immediately broke down in tears. You turned your head away because you didn\u2019t
+    want to see her cry. She stood up quickly and ran for the door. "
+  - You waited a few minutes. And walked after her. You found her outside, on the
+    ground.
+  - Naomi
+  - ARE YOU SURE?
+  - IS THAT REALLY HOW IT WENT?
+  - IS THAT REALLY HER NAME?
+  - "WHY DON\u2019T YOU REMEMBER?"
   joyfulText:
   - "Your favorite restaurant! Of course. You were on a date with her. She loves
     this restaurant too, that\u2019s why you picked it. Italian. Italian is classic.
-    That\u2019s why you went with it. You love italian too. And you wanted to split
-    a bottle of wine. "
-  - 'She was so excited! And happy! She picked through her plate of pasta in front
-    of her. Not quite eating full bites. And drinking her wine rather quickly. She
-    must have really enjoyed the wine! '
-  - She was just nervous because it was such big news. You asked her what she was
-    so excited about. But then..
-  - "Your favorite restaurant! Of course. You were on a date with her. She loves
-    this restaurant too, that\u2019s why you picked it. Italian. Italian is classic.
-    That\u2019s why you went with it. You love italian too. And you wanted to split
-    a bottle of wine. "
-  - "Your favorite restaurant! Of course. You were on a date with her. She loves
-    this restaurant too, that\u2019s why you picked it. Italian. Italian is classic.
-    That\u2019s why you went with it. You love italian too. And you wanted to split
-    a bottle of wine. "
+    That\u2019s why you went with it. You love Italian. And you wanted to split a
+    bottle of wine."
+  - She was so excited! And happy! She picked through her plate in front of her.
+    Not quite eating full bites. And drinking rather quickly. She must have really
+    enjoyed her drink!
+  - "She was just nervous because it was such big news. You asked her what she was
+    so excited about. But then\u2026"
+  - I remember. You must remember.
+  - "She said, \u201CYou never take things seriously.\u201D You know she always likes
+    your jokes and that you make her laugh. You don\u2019t see what the big deal
+    is."
+  - What about the good times we have had? You have a good thing with her, and you
+    think we can get back to that. Why is she ignoring that?
+  - "She said, \"You're a great person, but I think I am not good enough for you.
+    I think we should break up.\u201D "
+  - I thought I could do better.
+  - "She smiled tearfully. She knew this would happen. But then she couldn\u2019t
+    hold back her tears anymore and got up. She ran for the door."
+  - You followed her outside. She looked to her left, but that wasn't the right direction.
+    The car came from the right and hit her.
+  - Anna
+  - ARE YOU SURE?
+  - IS THAT REALLY HOW IT WENT?
+  - IS THAT REALLY HER NAME?
+  - "WHY DON\u2019T YOU REMEMBER?"
   insecureText:
-  - 'The sushi place. A common place for you two to be at. She liked it, you liked
-    it well enough. A good enough place as any for a conversation. '
-  - 'You knew she wanted to talk about something. You feared the worst but hoped
-    for the best. Maybe she wanted to tell you she wanted to take the next step with
-    you. That would be nice.  '
+  - Her favorite restaurant. Spanish tapas. She likes it because of the time she
+    spent studying abroad in Spain. You always resented her for leaving. She probably
+    cheated on you. But it was worth it to be with her. She glowed when she was happy.
+  - She ordered her favorite. It probably reminded her of the guy she cheated with.
+    She offered some to you, but the thought turned your stomach. Instead, you focused
+    on the plate in front of you, picking at it. She smiled at you, but somehow it
+    looked sad.
   - "She looked at you knowingly. She knew what you were thinking. She always knew
-    that you were worried about some ex or another. She opened her mouth to speak,
-    and then closed it\u2026."
-  - 'The sushi place. A common place for you two to be at. She liked it, you liked
-    it well enough. A good enough place as any for a conversation. '
-  - 'The sushi place. A common place for you two to be at. She liked it, you liked
-    it well enough. A good enough place as any for a conversation. '
+    that you were worried about some ex or another. You tensed up, holding your glass
+    too tightly. She opened her mouth to speak, and then closed it\u2026"
+  - I remember. You must remember.
+  - "She said, \u201CYou always overthink everything I do.\u201D But she always gives
+    you mixed signals! How can you not read into that?"
+  - Was it something I said? Was it something I did? You can tell she is upset. Should
+    you apologize? Or should she apologize?
+  - "She said, \u201CI am just not happy. Not anymore. I think we should break up.\u201D"
+  - I thought she deserved better. Better than someone as awful as me.
+  - She started crying. Ugly. Large fat tears. Your fault. All your fault. She ran
+    for the door.
+  - ' You sat. You tried to eat a few more bites of your food. It tasted salty from
+    the tears that ran down your face. You heard a large commotion and went outside.
+    There she was, on the ground.'
+  - Maria
+  - ARE YOU SURE?
+  - IS THAT REALLY HOW IT WENT?
+  - IS THAT REALLY HER NAME?
+  - WHY DON'T YOU REMEMBER?
   currentTalkingState: 0
   storyManager: {fileID: 0}
+  frameArray:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
