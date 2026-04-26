@@ -56,6 +56,9 @@
     "dotnet.backgroundAnalysis.compilerDiagnosticsScope": "fullSolution",
     "python.analysis.diagnosticMode": "workspace",
     "cSpell.words": [
-        "Digi"
-    ]
+        "Digi",
+        "Keijiro",
+        "Takahashi"
+    ],
+    "dotnet.preferCSharpExtension": true
 }
