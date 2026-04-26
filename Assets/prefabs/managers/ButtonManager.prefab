@@ -45,3 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonManager
   frameManager: {fileID: 0}
+  storyManager: {fileID: 0}
+  avoidantSelectButton: {fileID: 0}
+  joyfulSelectButton: {fileID: 0}
+  insecureSelectButton: {fileID: 0}
+  audioSource: {fileID: 0}
+  avoidantSoundClip: {fileID: 8300000, guid: e8ad81dee3b3a23428a7534c6b064d7e, type: 3}
+  joyfulSoundClip: {fileID: 8300000, guid: 9bf807d6a43d0604496a66ef7d2ac580, type: 3}
+  insecureSoundClip: {fileID: 8300000, guid: 03c4ce7b427c9e54b9b74b96d4cddd56, type: 3}
+  buttonClip: {fileID: 8300000, guid: ca348786a3d07dc4599d7751fe9b74b1, type: 3}
