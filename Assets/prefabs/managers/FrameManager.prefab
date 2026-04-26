@@ -50,17 +50,15 @@ MonoBehaviour:
   - "I don\u2019t want to forget about her. She is important. So important. Why can\u2019t
     I remember her name?"
   - "What were we doing?\\nWhy is this important again?  I remember\u2026"
-  - "What were we doing?\\nWhy is this important again?  I remember\u2026"
   - "Oh\u2026 yes. That's what it was. It started off fine enough. "
   - "Ah\u2026 Yea. She wanted to talk\u2026. "
   - "I.. don\u2019t want to remember anymore."
-  - "I.. don\u2019t want to remember anymore."
   - 'She sighed. She seemed unsurprised at my reaction. '
   - "Maybe I shouldn\u2019t remember how it went..."
-  - "Maybe I shouldn\u2019t remember how it went..."
-  - "Maybe I shouldn\u2019t remember how it went..."
+  - I remember. You must remember.
+  - 
   - "Ah\u2026how could I have forgotten that? It was the last thing I wanted to hear."
-  - "Ah\u2026how could I have forgotten that? It was the last thing I wanted to hear."
+  - "She said, \u201CI don\u2019t know if this is working anymore.\u201D"
   - "No, no, no fuck. I don\u2019t want to lose her. I don't want to forget. I must
     have said something. Why can\u2019t I remember properly?"
   - "I can\u2019t. It can\u2019t go this way"
@@ -73,6 +71,10 @@ MonoBehaviour:
   - "No\u2026.. No, no, no. "
   - "She\u2019s dead. And it's my fault."
   - "What was her name again\u2026?"
+  - ARE YOU SURE?
+  - IS THAT REALLY HOW IT WENT?
+  - IS THAT REALLY HER NAME?
+  - "WHY DON\u2019T YOU REMEMBER?"
   avoidantText:
   - The sushi place. A common place for you two to be. She liked it, you liked it
     well enough. A good enough place as any for a conversation.

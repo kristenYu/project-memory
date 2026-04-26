@@ -139,7 +139,8 @@ public class StoryManager : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     audioSource.PlayOneShot(buttonClip);
-                    stageIndex += 1;
+                    SetDecision(TalkingState.ALL);
+                    buttonManager.HideAllSelectButtons();
                 }
                 break;
         }

@@ -52,14 +52,11 @@ public class ButtonManager : MonoBehaviour
 
     public void DeselectButton()
     {
-        if (EventSystem.current.currentSelectedGameObject.name != "Button")
-        {
-            frameManager.currentTalkingState = TalkingState.player;
-            avoidantSelectButton.SetActive(false);
-            joyfulSelectButton.SetActive(false);
-            insecureSelectButton.SetActive(false);
-            frameManager.ChangeFrame(frameManager.currentTalkingState);
-        }
+        frameManager.currentTalkingState = TalkingState.player;
+        avoidantSelectButton.SetActive(false);
+        joyfulSelectButton.SetActive(false);
+        insecureSelectButton.SetActive(false);
+        frameManager.ChangeFrame(frameManager.currentTalkingState);
     }
 
     public void PressJoyfulButton()
