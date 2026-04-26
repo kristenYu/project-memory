@@ -51,16 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "project-memory.slnx",
-    "dotnet.backgroundAnalysis.analyzerDiagnosticsScope": "fullSolution",
-    "dotnet.backgroundAnalysis.compilerDiagnosticsScope": "fullSolution",
-    "python.analysis.diagnosticMode": "workspace",
-    "cSpell.words": [
-        "Digi",
-        "Keijiro",
-        "Takahashi"
-    ],
-    "dotnet.preferCSharpExtension": true,
-    "dotnet.automaticallySyncWithActiveItem": true,
-    "explorer.incrementalNaming": "smart"
+    "dotnet.defaultSolution": "project-memory.slnx"
 }
