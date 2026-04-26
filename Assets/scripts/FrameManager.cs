@@ -7,6 +7,14 @@ public enum TalkingState
     avoidant,
     joyful,
     insecure,
+    ALL,
+}
+
+public enum Stage
+{
+    player,
+    voices,
+    ALL,
 }
 
 public class FrameManager : MonoBehaviour
@@ -15,10 +23,10 @@ public class FrameManager : MonoBehaviour
 
     public TextMeshProUGUI frameText;
     public string[] playerText;
+
     public string[] avoidantText;
     public string[] joyfulText;
     public string[] insecureText;
-
     public TalkingState currentTalkingState;
 
     public StoryManager storyManager;
@@ -35,16 +43,16 @@ public class FrameManager : MonoBehaviour
         switch (currentTalkingState)
         {
             case TalkingState.avoidant:
-                frameText.text = avoidantText[storyManager.currentDecision];
+                frameText.text = avoidantText[storyManager.voicesIndex];
                 break;
             case TalkingState.joyful:
-                frameText.text = joyfulText[storyManager.currentDecision];
+                frameText.text = joyfulText[storyManager.voicesIndex];
                 break;
             case TalkingState.insecure:
-                frameText.text = insecureText[storyManager.currentDecision];
+                frameText.text = insecureText[storyManager.voicesIndex];
                 break;
             case TalkingState.player:
-                frameText.text = playerText[storyManager.currentDecision];
+                frameText.text = playerText[storyManager.playerIndex];
                 break;
         }
     }
