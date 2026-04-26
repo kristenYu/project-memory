@@ -1,4 +1,7 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.TextCore.Text;
+using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -8,6 +11,9 @@ public class ButtonManager : MonoBehaviour
     public GameObject joyfulSelectButton;
     public GameObject insecureSelectButton;
 
+    public Button avoidantPress;
+    public Button insecurePress;
+    public Button joyfulPress;
     public AudioSource audioSource;
     public AudioClip avoidantSoundClip;
     public AudioClip joyfulSoundClip;
@@ -20,9 +26,18 @@ public class ButtonManager : MonoBehaviour
         HideAllSelectButtons();
     }
 
-    void Update()
+    public void DeactivateEmotions()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) { }
+        avoidantPress.interactable = false;
+        insecurePress.interactable = false;
+        joyfulPress.interactable = false;
+    }
+
+    public void ActivateEmotions()
+    {
+        avoidantPress.interactable = true;
+        insecurePress.interactable = true;
+        joyfulPress.interactable = true;
     }
 
     public void PressAvoidantButton()
@@ -31,8 +46,20 @@ public class ButtonManager : MonoBehaviour
         avoidantSelectButton.SetActive(true);
         joyfulSelectButton.SetActive(false);
         insecureSelectButton.SetActive(false);
-        frameManager.changeFrame(frameManager.currentTalkingState);
+        frameManager.ChangeFrame(frameManager.currentTalkingState);
         audioSource.PlayOneShot(avoidantSoundClip);
+    }
+
+    public void DeselectButton()
+    {
+        if (EventSystem.current.currentSelectedGameObject.name != "Button")
+        {
+            frameManager.currentTalkingState = TalkingState.player;
+            avoidantSelectButton.SetActive(false);
+            joyfulSelectButton.SetActive(false);
+            insecureSelectButton.SetActive(false);
+            frameManager.ChangeFrame(frameManager.currentTalkingState);
+        }
     }
 
     public void PressJoyfulButton()
@@ -41,7 +68,7 @@ public class ButtonManager : MonoBehaviour
         avoidantSelectButton.SetActive(false);
         joyfulSelectButton.SetActive(true);
         insecureSelectButton.SetActive(false);
-        frameManager.changeFrame(frameManager.currentTalkingState);
+        frameManager.ChangeFrame(frameManager.currentTalkingState);
         audioSource.PlayOneShot(joyfulSoundClip);
     }
 
@@ -51,7 +78,7 @@ public class ButtonManager : MonoBehaviour
         avoidantSelectButton.SetActive(false);
         joyfulSelectButton.SetActive(false);
         insecureSelectButton.SetActive(true);
-        frameManager.changeFrame(frameManager.currentTalkingState);
+        frameManager.ChangeFrame(frameManager.currentTalkingState);
         audioSource.PlayOneShot(insecureSoundClip);
     }
 

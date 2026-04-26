@@ -60,5 +60,7 @@
         "Keijiro",
         "Takahashi"
     ],
-    "dotnet.preferCSharpExtension": true
+    "dotnet.preferCSharpExtension": true,
+    "dotnet.automaticallySyncWithActiveItem": true,
+    "explorer.incrementalNaming": "smart"
 }

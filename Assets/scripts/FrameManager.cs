@@ -57,7 +57,7 @@ public class FrameManager : MonoBehaviour
         }
     }
 
-    public void changeFrame(TalkingState talkingState)
+    public void ChangeFrame(TalkingState talkingState)
     {
         foreach (FramePiece framePiece in frameArray)
         {

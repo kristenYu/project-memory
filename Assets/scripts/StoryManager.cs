@@ -8,6 +8,7 @@ public class StoryManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip buttonClip;
     public FrameManager frameManager;
+    public ButtonManager buttonManager;
     public GlitchManager glitchManager;
     public TalkingState[] decisionArray;
     public TalkingState currentTalkingState;
@@ -16,7 +17,6 @@ public class StoryManager : MonoBehaviour
     public GameObject theAvoidant;
     public GameObject theJoyful;
     public GameObject theInsecure;
-
     public GameObject spaceContinue;
 
     public GameObject coreBl;
@@ -79,7 +79,6 @@ public class StoryManager : MonoBehaviour
         glitchManager.OpeningGlitch();
         currentDecision = 0;
         isIntro = true;
-
         theAvoidant.SetActive(false);
         theJoyful.SetActive(false);
         theInsecure.SetActive(false);
@@ -110,6 +109,7 @@ public class StoryManager : MonoBehaviour
         {
             case Stage.player:
                 spaceContinue.SetActive(true);
+                buttonManager.DeactivateEmotions();
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     audioSource.PlayOneShot(buttonClip);
@@ -129,16 +129,17 @@ public class StoryManager : MonoBehaviour
                 }
                 break;
             case Stage.voices:
+                buttonManager.ActivateEmotions();
                 spaceContinue.SetActive(false);
                 break;
             case Stage.ALL:
+                buttonManager.ActivateEmotions();
                 spaceContinue.SetActive(true);
-                frameManager.changeFrame(TalkingState.ALL);
+                frameManager.ChangeFrame(TalkingState.ALL);
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     audioSource.PlayOneShot(buttonClip);
                     stageIndex += 1;
-                    voicesIndex += 1;
                 }
                 break;
         }
@@ -157,7 +158,7 @@ public class StoryManager : MonoBehaviour
         {
             if (coreBlGlitchLengthTimer > coreBlRandomGlitchLength)
             {
-                resetCore(coreBlSpriteRenderer, coreBlSprites);
+                ResetCore(coreBlSpriteRenderer, coreBlSprites);
                 coreBlStartGlitchTimer = 0;
                 isCoreB1Glitching = false;
             }
@@ -166,7 +167,7 @@ public class StoryManager : MonoBehaviour
         {
             if (coreBrGlitchLengthTimer > coreBrRandomGlitchLength)
             {
-                resetCore(coreBrSpriteRenderer, coreBrSprites);
+                ResetCore(coreBrSpriteRenderer, coreBrSprites);
                 coreBrStartGlitchTimer = 0;
                 isCoreBrGlitching = false;
             }
@@ -175,7 +176,7 @@ public class StoryManager : MonoBehaviour
         {
             if (coreTlGlitchLengthTimer > coreTlRandomGlitchLength)
             {
-                resetCore(coreTlSpriteRenderer, coreTlSprites);
+                ResetCore(coreTlSpriteRenderer, coreTlSprites);
                 coreTlStartGlitchTimer = 0;
                 isCoreTlGlitching = false;
             }
@@ -184,7 +185,7 @@ public class StoryManager : MonoBehaviour
         {
             if (coreTrGlitchLengthTimer > coreTrRandomGlitchLength)
             {
-                resetCore(coreTrSpriteRenderer, coreTrSprites);
+                ResetCore(coreTrSpriteRenderer, coreTrSprites);
                 coreTrStartGlitchTimer = 0;
                 isCoreTrGlitching = false;
             }
@@ -196,7 +197,7 @@ public class StoryManager : MonoBehaviour
             {
                 if (coreBlStartGlitchTimer > coreBlRandomStartGlitch)
                 {
-                    glitchCore(0, coreBlSpriteRenderer, coreBlSprites);
+                    GlitchCore(0, coreBlSpriteRenderer, coreBlSprites);
                     isCoreB1Glitching = true;
                 }
             }
@@ -208,7 +209,7 @@ public class StoryManager : MonoBehaviour
             {
                 if (coreBrStartGlitchTimer > coreBrRandomStartGlitch)
                 {
-                    glitchCore(1, coreBrSpriteRenderer, coreBrSprites);
+                    GlitchCore(1, coreBrSpriteRenderer, coreBrSprites);
                     isCoreBrGlitching = true;
                 }
             }
@@ -220,7 +221,7 @@ public class StoryManager : MonoBehaviour
             {
                 if (coreTlStartGlitchTimer > coreTlRandomStartGlitch)
                 {
-                    glitchCore(2, coreTlSpriteRenderer, coreTlSprites);
+                    GlitchCore(2, coreTlSpriteRenderer, coreTlSprites);
                     isCoreTlGlitching = true;
                 }
             }
@@ -231,7 +232,7 @@ public class StoryManager : MonoBehaviour
             {
                 if (coreTrStartGlitchTimer > coreTrRandomStartGlitch)
                 {
-                    glitchCore(3, coreTrSpriteRenderer, coreTrSprites);
+                    GlitchCore(3, coreTrSpriteRenderer, coreTrSprites);
                     isCoreTrGlitching = true;
                 }
             }
@@ -242,7 +243,7 @@ public class StoryManager : MonoBehaviour
     {
         decisionArray.Append(talkingState);
         frameManager.currentTalkingState = TalkingState.player;
-        frameManager.changeFrame(TalkingState.player);
+        frameManager.ChangeFrame(TalkingState.player);
         coreBlStartGlitchTimer = 0;
         currentDecision += 1;
         stageIndex += 1;
@@ -265,14 +266,14 @@ public class StoryManager : MonoBehaviour
         }
     }
 
-    public void glitchCore(int decisionPoint, SpriteRenderer coreRenderer, Sprite[] spriteArray)
+    public void GlitchCore(int decisionPoint, SpriteRenderer coreRenderer, Sprite[] spriteArray)
     {
         Debug.Log(coreRenderer);
         Debug.Log((int)decisionArray[decisionPoint]);
         coreRenderer.sprite = spriteArray[(int)decisionArray[decisionPoint]];
     }
 
-    public void resetCore(SpriteRenderer coreRenderer, Sprite[] spriteArray)
+    public void ResetCore(SpriteRenderer coreRenderer, Sprite[] spriteArray)
     {
         coreRenderer.sprite = spriteArray[0]; //hard coded to be 0 so it is the core without the glitch
     }

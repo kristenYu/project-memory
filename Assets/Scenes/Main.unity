@@ -506,6 +506,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5513892426686167358, guid: 817ddb8019292d542bed04d2fbb20592, type: 3}
   m_PrefabInstance: {fileID: 281762432897857604}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &454126137 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4748754378718718738, guid: 817ddb8019292d542bed04d2fbb20592, type: 3}
+  m_PrefabInstance: {fileID: 281762432897857604}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 454126135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &465116463 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7537223281712291495, guid: 7b2bae9c8a3b61e49b2cab03187d55d1, type: 3}
@@ -1766,6 +1777,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6471471102226359318, guid: 554caae7d3dfb0e4d9b200a901f0face, type: 3}
   m_PrefabInstance: {fileID: 4954788048771151686}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1849651431 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 412444099708321612, guid: 554caae7d3dfb0e4d9b200a901f0face, type: 3}
+  m_PrefabInstance: {fileID: 4954788048771151686}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849651429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &1886749688 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3626134955473963217, guid: 93be76a99eb03574aa06a8a29292dc8d, type: 3}
@@ -1992,6 +2014,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2827486478876541482, guid: 7b2bae9c8a3b61e49b2cab03187d55d1, type: 3}
   m_PrefabInstance: {fileID: 7773108815792559986}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2077140214 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8321986781592554170, guid: 7b2bae9c8a3b61e49b2cab03187d55d1, type: 3}
+  m_PrefabInstance: {fileID: 7773108815792559986}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2077140212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
 --- !u!1 &2094657776
 GameObject:
   m_ObjectHideFlags: 0
@@ -2598,6 +2631,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 147372937}
     - target: {fileID: 4649228357953425432, guid: c39bb06d6848e2441b3904b189ba9a8f, type: 3}
+      propertyPath: joyfulPress
+      value: 
+      objectReference: {fileID: 1849651431}
+    - target: {fileID: 4649228357953425432, guid: c39bb06d6848e2441b3904b189ba9a8f, type: 3}
       propertyPath: frameManager
       value: 
       objectReference: {fileID: 1322958488}
@@ -2605,6 +2642,14 @@ PrefabInstance:
       propertyPath: storyManager
       value: 
       objectReference: {fileID: 8877453662797353349}
+    - target: {fileID: 4649228357953425432, guid: c39bb06d6848e2441b3904b189ba9a8f, type: 3}
+      propertyPath: avoidantPress
+      value: 
+      objectReference: {fileID: 2077140214}
+    - target: {fileID: 4649228357953425432, guid: c39bb06d6848e2441b3904b189ba9a8f, type: 3}
+      propertyPath: insecurePress
+      value: 
+      objectReference: {fileID: 454126137}
     - target: {fileID: 4649228357953425432, guid: c39bb06d6848e2441b3904b189ba9a8f, type: 3}
       propertyPath: joyfulSelectButton
       value: 
@@ -3211,6 +3256,10 @@ PrefabInstance:
       propertyPath: frameManager
       value: 
       objectReference: {fileID: 1322958488}
+    - target: {fileID: 1364785838555814712, guid: 6f24cecd336814b448f209bb6e239a95, type: 3}
+      propertyPath: buttonManager
+      value: 
+      objectReference: {fileID: 1711471757}
     - target: {fileID: 1364785838555814712, guid: 6f24cecd336814b448f209bb6e239a95, type: 3}
       propertyPath: glitchManager
       value: 

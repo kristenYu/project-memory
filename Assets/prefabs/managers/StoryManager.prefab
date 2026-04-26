@@ -47,10 +47,11 @@ MonoBehaviour:
   audioSource: {fileID: 0}
   buttonClip: {fileID: 8300000, guid: ca348786a3d07dc4599d7751fe9b74b1, type: 3}
   frameManager: {fileID: 0}
+  buttonManager: {fileID: 0}
   glitchManager: {fileID: 0}
   decisionArray: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   currentTalkingState: 0
-  currentDecision: 0
+  currentDecision: 6
   theAvoidant: {fileID: 0}
   theJoyful: {fileID: 0}
   theInsecure: {fileID: 0}
@@ -84,7 +85,7 @@ MonoBehaviour:
   - {fileID: -1761045967, guid: 815b018b77a5b3d45916be764aeee159, type: 3}
   - {fileID: -1141840334, guid: 815b018b77a5b3d45916be764aeee159, type: 3}
   isIntro: 0
-  scriptStage: 000000000000000000000000010000000100000000000000000000000200000001000000010000000100000001000000
-  playerIndex: 0
-  voicesIndex: 0
-  stageIndex: 0
+  scriptStage: 000000000000000000000000010000000100000000000000000000000100000000000000020000000100000000000000020000000100000001000000
+  playerIndex: 10
+  voicesIndex: 6
+  stageIndex: 11
