@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -32,6 +33,21 @@ public class FramePiece : MonoBehaviour
             case TalkingState.insecure:
                 thisSpriteRenderer.sprite = insecureFrame;
                 break;
+            case TalkingState.ALL:
+                thisSpriteRenderer.sprite = RandomSprite();
+                break;
         }
+    }
+
+    public Sprite RandomSprite()
+    {
+        int x = Random.Range(0, 3);
+        return x switch
+        {
+            0 => insecureFrame,
+            1 => avoidantFrame,
+            2 => joyfulFrame,
+            _ => playerFrame,
+        };
     }
 }
