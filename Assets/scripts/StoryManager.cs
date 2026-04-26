@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class StoryManager : MonoBehaviour
     public FrameManager frameManager;
     public ButtonManager buttonManager;
     public GlitchManager glitchManager;
-    public TalkingState[] decisionArray;
+    public List<TalkingState> decisionArray;
     public TalkingState currentTalkingState;
     public int currentDecision;
 
@@ -90,7 +91,7 @@ public class StoryManager : MonoBehaviour
 
         //setup timers for glitching
         coreBlStartGlitchTimer = 0;
-        coreBlRandomStartGlitch = Random.Range(1f, 5f);
+        coreBlRandomStartGlitch = Random.Range(5f, 5f);
         isCoreB1Glitching = false;
         coreBrStartGlitchTimer = 0;
         coreBrRandomStartGlitch = Random.Range(1f, 5f);
@@ -105,6 +106,10 @@ public class StoryManager : MonoBehaviour
 
     void Update()
     {
+        if (stageIndex >= scriptStage.Length)
+        {
+            Application.Quit();
+        }
         switch (scriptStage[stageIndex])
         {
             case Stage.player:
@@ -242,7 +247,7 @@ public class StoryManager : MonoBehaviour
 
     public void SetDecision(TalkingState talkingState)
     {
-        decisionArray.Append(talkingState);
+        decisionArray.Add(talkingState);
         frameManager.currentTalkingState = TalkingState.player;
         frameManager.ChangeFrame(TalkingState.player);
         coreBlStartGlitchTimer = 0;
@@ -269,8 +274,7 @@ public class StoryManager : MonoBehaviour
 
     public void GlitchCore(int decisionPoint, SpriteRenderer coreRenderer, Sprite[] spriteArray)
     {
-        Debug.Log(coreRenderer);
-        Debug.Log((int)decisionArray[decisionPoint]);
+        Debug.Log("glitchingggg");
         coreRenderer.sprite = spriteArray[(int)decisionArray[decisionPoint]];
     }
 
