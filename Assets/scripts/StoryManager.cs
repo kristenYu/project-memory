@@ -203,7 +203,13 @@ public class StoryManager : MonoBehaviour
             {
                 if (coreBlStartGlitchTimer > coreBlRandomStartGlitch)
                 {
-                    GlitchCore(0, coreBlSpriteRenderer, coreBlSprites);
+                    GlitchCore(
+                        ref coreBlGlitchLengthTimer,
+                        ref coreBlRandomGlitchLength,
+                        currentDecision,
+                        coreBlSpriteRenderer,
+                        coreBlSprites
+                    );
                     isCoreB1Glitching = true;
                 }
             }
@@ -215,7 +221,13 @@ public class StoryManager : MonoBehaviour
             {
                 if (coreBrStartGlitchTimer > coreBrRandomStartGlitch)
                 {
-                    GlitchCore(1, coreBrSpriteRenderer, coreBrSprites);
+                    GlitchCore(
+                        ref coreBrGlitchLengthTimer,
+                        ref coreBrRandomGlitchLength,
+                        currentDecision,
+                        coreBrSpriteRenderer,
+                        coreBrSprites
+                    );
                     isCoreBrGlitching = true;
                 }
             }
@@ -227,7 +239,13 @@ public class StoryManager : MonoBehaviour
             {
                 if (coreTlStartGlitchTimer > coreTlRandomStartGlitch)
                 {
-                    GlitchCore(2, coreTlSpriteRenderer, coreTlSprites);
+                    GlitchCore(
+                        ref coreTlGlitchLengthTimer,
+                        ref coreTlRandomGlitchLength,
+                        currentDecision,
+                        coreTlSpriteRenderer,
+                        coreTlSprites
+                    );
                     isCoreTlGlitching = true;
                 }
             }
@@ -238,7 +256,13 @@ public class StoryManager : MonoBehaviour
             {
                 if (coreTrStartGlitchTimer > coreTrRandomStartGlitch)
                 {
-                    GlitchCore(3, coreTrSpriteRenderer, coreTrSprites);
+                    GlitchCore(
+                        ref coreTrGlitchLengthTimer,
+                        ref coreTrRandomGlitchLength,
+                        currentDecision,
+                        coreTrSpriteRenderer,
+                        coreTrSprites
+                    );
                     isCoreTrGlitching = true;
                 }
             }
@@ -272,9 +296,17 @@ public class StoryManager : MonoBehaviour
         }
     }
 
-    public void GlitchCore(int decisionPoint, SpriteRenderer coreRenderer, Sprite[] spriteArray)
+    public void GlitchCore(
+        ref float coreGlitchTimer,
+        ref float coreGlitchLength,
+        int decisionPoint,
+        SpriteRenderer coreRenderer,
+        Sprite[] spriteArray
+    )
     {
-        Debug.Log("glitchingggg");
+        decisionPoint = Random.Range(0, decisionPoint);
+        coreGlitchTimer = 0;
+        coreGlitchLength = Random.Range(0.5f, 2f);
         coreRenderer.sprite = spriteArray[(int)decisionArray[decisionPoint]];
     }
 

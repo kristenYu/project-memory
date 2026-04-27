@@ -51,5 +51,8 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "project-memory.slnx"
+    "dotnet.defaultSolution": "project-memory.slnx",
+    "cSpell.words": [
+        "Digi"
+    ]
 }
